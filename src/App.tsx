@@ -3,6 +3,7 @@ import { reverse } from "./lib/reverse";
 import { split } from "./lib/split";
 import CountModal from "./components/CountModal";
 import ReplaceModal from "./components/ReplaceModal";
+import { getInfo } from "./lib/info";
 
 function App() {
   const [input, setInput] = createSignal("");
@@ -16,7 +17,7 @@ function App() {
           onInput={(e) => setInput(e.target.value)}
           class="textarea textarea-bordered textarea-lg w-[60%] h-[40%]"
         />
-        <div class="flex justify-around  ">
+        <div class="flex justify-around gap-2 ">
           <button onClick={() => reverse(input(), setOutput)} class="btn">
             Reverse
           </button>
@@ -42,6 +43,9 @@ function App() {
             class="btn"
           >
             Replace
+          </button>
+          <button class="btn" onClick={() => getInfo(input(), setOutput)}>
+            Info
           </button>
         </div>
         <div>
