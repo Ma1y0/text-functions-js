@@ -4,6 +4,7 @@ import { split } from "./lib/split";
 import CountModal from "./components/CountModal";
 import ReplaceModal from "./components/ReplaceModal";
 import { getInfo } from "./lib/info";
+import { caesarDecode, caesarEncode } from "./lib/caesar";
 
 function App() {
   const [input, setInput] = createSignal("");
@@ -46,6 +47,18 @@ function App() {
           </button>
           <button class="btn" onClick={() => getInfo(input(), setOutput)}>
             Info
+          </button>
+          <button
+            onClick={() => caesarEncode(input(), setOutput, 5)}
+            class="btn"
+          >
+            Encode
+          </button>
+          <button
+            onClick={() => caesarDecode(input(), setOutput, 5)}
+            class="btn"
+          >
+            Decode
           </button>
         </div>
         <div>
