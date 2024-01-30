@@ -1,3 +1,5 @@
+# text-functions-js
+
 ## Usage
 
 ```bash
@@ -25,4 +27,3 @@ Your app is ready to be deployed!
 
 
 
-# text-functions-js
